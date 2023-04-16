@@ -1,0 +1,112 @@
+nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem 3.5rem;
+  }
+
+  nav h1 {
+    color: var(--primary-color);
+  }
+
+  nav h1:hover {
+    transition: 0.5s;
+    color: var(--secondary-color);
+  }
+  
+  nav a {
+    color: var(--primary-color);
+    transition: var(--transicion);
+  }
+  nav a:hover {
+    color: var(--secondary-color);
+    padding-bottom: 6px;
+    transition: var(--transition);
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.9rem;
+  }
+  
+  nav ul li {
+    font-weight: var(--negrita);
+  }
+
+  .menu-hamburguesa {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }
+
+  .menu-hamburguesa:hover {
+    color: var(--secondary-color);
+  }
+
+  .show {
+    transform: translateX(0);
+  }
+
+  .contactButton {
+    color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .contactButton:hover {
+    color: white;
+    padding: 10.2px;
+    border-bottom: 2px solid var(--bg-color);
+    background-color: var(--bg-color);
+  }
+
+  .iconPage {
+    width: 8%;
+    min-width: 90px;
+  }
+
+  @media screen and (max-width: 720px) {
+    nav {
+      padding: 1.5rem 1rem;
+    }
+
+    nav h1 {
+      font-size: 1.2em;
+    }
+
+    nav ul {
+      position: fixed;
+      background-color: var(--bg-color);
+      flex-direction: column;
+      top: 86px;
+      left: 10%;
+      width: 80%;
+      text-align: center;
+      transform: translateX(120%);
+      transition: var(--transition);
+      height: 40px;
+      border: 1px solid white;
+      border-radius: 1%;
+    }
+  
+     nav ul li {
+      margin: 8px;
+    }
+    .menu-hamburguesa {
+      display: block;
+    }
+  }
